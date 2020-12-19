@@ -1,3 +1,59 @@
 body {
-    background-color: brown;
+    background-image: url(/img/backround.jpg);
+
+}
+
+#welcomeText {
+    padding-right: 200px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #e0d1d1;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    float: left;
+    }
+#buttonContainer{
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}    
+
+#menuContainer{
+    padding-top: 20px;
+}
+
+a {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    color: #f4f4f4;
+    text-transform: uppercase;
+    }
+      
+.btn {
+    text-decoration: none;
+    border: 1px solid rgb(146, 148, 248);
+    position: relative;
+    overflow: hidden;
+    }
+      
+.btn:hover {
+    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+    }
+
+#createForm{
+    border: white 2px solid;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    color: #f4f4f4;
+    text-transform: uppercase;
+    margin-top: 150px;
+    margin-left: 500px;
+    width: 400px;
+    
 }
