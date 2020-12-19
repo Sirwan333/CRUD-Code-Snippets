@@ -1,0 +1,23 @@
+
+
+<table>
+   <thead>
+    <tr>
+            <th>Title</th>
+            <th>Snippet</th>
+    </tr>
+    
+   <thead>
+   {{#if viewData.snippets.length }}
+   {{#each viewData.snippets}}
+   <tbody>
+        <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.content}}</td>
+        </tr>
+   </tbody>
+   {{/each}}
+  {{/if}}
+  
+</table>
+  

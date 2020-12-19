@@ -57,3 +57,21 @@ a {
     width: 400px;
     
 }
+
+table {
+    background-color: #e0d1d1;
+    margin-top: 100px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tbody:nth-child(odd) {
+    background-color: #b9b1b1;
+  }
