@@ -3,8 +3,16 @@ var path = require('path')
 var logger = require('morgan')
 var hbs = require("express-hbs")
 var mongoose = require("./config/mongoose")
+const session = require('express-session')
 var app = express()
 
+
+app.use(session({
+    resave: false, // don't save session if unmodified
+    saveUninitialized: false, // don't create session until something stored
+    secret: 'keyboard cat'
+  }))
+  
 mongoose.connect().catch(err => {
     console.error("Error")
     process.exit(1)
