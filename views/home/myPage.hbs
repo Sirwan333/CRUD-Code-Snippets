@@ -2,9 +2,17 @@
         <div id="welcomeText" class="welcomeText">Welcom To Code Snippet</div>
         <div id="menuContainer">
             <a href="/" class="btn">Home</a>
-            <a href="/login" class="btn">Log out</a>
+            <a href="/logout" class="btn">Log out</a>
         </div>
 </div>
+{{#if flash}}
+<p style="padding: 1em; background-color: #ccf">{{ flash }}</p>
+{{/if}}
+
+<div id="create">
+    <a href="/create" class="btn">Create Snippet</a>
+</div>
+
 <table>
    <thead>
     <tr>
@@ -18,7 +26,7 @@
    <tbody>
         <tr>
             <td>{{this.title}}</td>
-            <td>{{this.content}}</td>
+            <td>{{this.content}}<a href="/delete/{{this.id}}" class="delete" id="delete">delete</a><a href="#" class="update" id="update">update</a></td>
         </tr>
    </tbody>
    {{/each}}

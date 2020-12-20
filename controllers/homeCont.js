@@ -1,6 +1,10 @@
+/**
+ * @param req
+ * @param res
+ */
 const index = (req, res) => {
-   var user = req.session.user
-   res.render("home/index", {user})
+  var user = req.session.user
+  res.render('home/index', { user })
 }
 
 module.exports = { index }

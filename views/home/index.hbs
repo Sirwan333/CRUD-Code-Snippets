@@ -3,8 +3,8 @@
         <div id="menuContainer">
             <a href="/" class="btn">Home</a>
             {{#if user}}
-            <a href="/login" class="btn">Log out</a>
-            <a href="/myPage" class="btn">My Page</a>
+            <a href="/logout" class="btn">Log out</a>
+            <a href={{user}} class="btn">My Page</a>
             {{/if}}
             {{#unless user}}
             <a href="/login" class="btn">Log in</a>
