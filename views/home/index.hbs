@@ -1,5 +1,17 @@
-    
+ <div id="welcomeTextContainer">
+        <div id="welcomeText" class="welcomeText">Welcom To Code Snippet</div>
+        <div id="menuContainer">
+            <a href="/" class="btn">Home</a>
+            {{#if user}}
+            <a href="/login" class="btn">Log out</a>
+            <a href="/myPage" class="btn">My Page</a>
+            {{/if}}
+            {{#unless user}}
+            <a href="/login" class="btn">Log in</a>
+            <a href="/register" class="btn">Register</a>
+            {{/unless}}
+        </div>
 </div>
 <div id="buttonContainer">
-    <a href="#" class="btn">View Code Snippets</a>
+    <a href="/list" class="btn">View Code Snippets</a>
 </div>

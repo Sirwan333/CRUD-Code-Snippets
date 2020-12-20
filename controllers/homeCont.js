@@ -1,5 +1,6 @@
 const index = (req, res) => {
-   res.render("home/index")
+   var user = req.session.user
+   res.render("home/index", {user})
 }
 
 module.exports = { index }

@@ -12,6 +12,7 @@ const index = (req, res) => {
     }
 }
 const list = async (req, res, next) => {
+    var user = req.session.user
     try {
       const viewData = {
         snippets: (await snippetModel.find({}))
@@ -20,7 +21,7 @@ const list = async (req, res, next) => {
             content: snippet.content
           }))
       }
-      res.render('home/list', { viewData })
+      res.render('home/list', { viewData, user })
     } catch (error) {
       next(error)
     }
@@ -30,7 +31,7 @@ const indexPost = (req, res) => {
     const snippet = new snippetModel({
         title: req.body.title,
         content: req.body.snippet,
-        // username: req.session.body.username
+        username: req.session.user
     })
     snippet.save()
     res.render("home/create")
