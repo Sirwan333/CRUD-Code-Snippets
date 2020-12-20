@@ -3,7 +3,7 @@ var path = require('path')
 var logger = require('morgan')
 var hbs = require("express-hbs")
 var mongoose = require("./config/mongoose")
-const session = require('express-session')
+var session = require('express-session')
 var app = express()
 
 
@@ -20,6 +20,8 @@ mongoose.connect().catch(err => {
 app.engine("hbs", hbs.express4({
     defaultLayout: path.join(__dirname, "views", "layouts", "default")
 }))
+
+
 app.set("view engine", "hbs")
 app.use(express.urlencoded({ extended:false }))
 app.use(express.static(path.join(__dirname, "public")))

@@ -13,6 +13,12 @@ const snippet = new Schema({
     max: 100,
     min: 1
   },
+  username: {
+    type: String,
+    required: true,
+    max: 100,
+    min: 1
+  },
 })
 const Snippet = mongoose.model('Snippet', snippet)
 module.exports = Snippet

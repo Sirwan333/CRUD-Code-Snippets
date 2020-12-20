@@ -5,6 +5,7 @@ const userModel = require("../models/user")
 
 const register = (req, res) => {
     res.render("home/register")
+    console.log(JSON.stringify(req.session, null, 1))
 }
  
 const registerPost = (req, res) => {

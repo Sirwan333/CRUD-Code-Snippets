@@ -1,10 +1,15 @@
+const session = require("express-session")
 const snippetModel = require("../models/snippet")
+const User = require("../models/user")
 
 
 
 
 const index = (req, res) => {
-    res.render("home/create")
+  console.log(JSON.stringify(req.session, null, 3))
+    if(req.session.user != null){
+      res.render("home/create")
+    }
 }
 const list = async (req, res, next) => {
     try {
@@ -24,7 +29,8 @@ const list = async (req, res, next) => {
 const indexPost = (req, res) => {
     const snippet = new snippetModel({
         title: req.body.title,
-        content: req.body.snippet
+        content: req.body.snippet,
+        // username: req.session.body.username
     })
     snippet.save()
     res.render("home/create")
