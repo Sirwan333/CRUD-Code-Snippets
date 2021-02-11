@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 
-const CONNICTION_DB = 'mongodb+srv://sirwan:0733691314@1dv523.j926i.mongodb.net/snippet?retryWrites=true&w=majority'
+const CONNICTION_DB = *******
 
 /**
  *
